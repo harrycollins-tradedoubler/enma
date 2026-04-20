@@ -266,17 +266,30 @@ body {
   min-height: 34px;
   border-radius: 10px;
   padding: 0 0.2rem;
-  display: flex;
+  display: block;
   align-items: center;
-  gap: 0.06rem;
   text-align: left;
   font-size: 0.96rem;
   line-height: 1.35;
   font-weight: 560;
   color: #152326;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.query-command-text::-webkit-scrollbar {
+  display: none;
+}
+
+.query-command-stream {
+  min-height: 34px;
+  width: max-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.06rem;
 }
 
 .query-demo-caret {

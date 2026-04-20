@@ -24,7 +24,13 @@ function useReducedMotion() {
 export default function HeroVisibilityDemo() {
   const [typedText, setTypedText] = useState(QUERY_SEQUENCE[0].slice(0, 1));
   const timersRef = useRef([]);
+  const textViewportRef = useRef(null);
   const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (!textViewportRef.current) return;
+    textViewportRef.current.scrollLeft = textViewportRef.current.scrollWidth;
+  }, [typedText]);
 
   useEffect(() => {
     const clearTimers = () => {
@@ -73,9 +79,11 @@ export default function HeroVisibilityDemo() {
           </svg>
         </span>
 
-        <div className="query-command-text" aria-live="polite">
-          <span>{typedText}</span>
-          <span className="query-demo-caret" aria-hidden="true" />
+        <div className="query-command-text" aria-live="polite" ref={textViewportRef}>
+          <span className="query-command-stream">
+            <span>{typedText}</span>
+            <span className="query-demo-caret" aria-hidden="true" />
+          </span>
         </div>
 
         <button
