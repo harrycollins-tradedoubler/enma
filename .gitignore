@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.edge-headless/
+.dev-server.log
+.dev-server.err.log
+.DS_Store
+Thumbs.db
