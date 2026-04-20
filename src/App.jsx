@@ -99,7 +99,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="shift" className="shift-section relative overflow-hidden py-12 sm:py-14">
+        <section id="shift" className="shift-section reveal relative overflow-hidden py-12 sm:py-14">
           <div className="shift-layout grid w-full items-center lg:grid-cols-[minmax(340px,560px),1fr]">
             <div className="shift-copy px-4 sm:px-6 lg:pl-12 lg:pr-6">
               <SectionHeading eyebrow="The Shift" title="Your SEO advantage is collapsing" />
@@ -122,15 +122,17 @@ export default function App() {
           </div>
         </section>
 
-        <LogoRail
-          logos={advertiserLogos}
-          mode="static"
-          eyebrow="Trusted by 30K+ brands and 1M+ partners worldwide"
-        />
+        <div className="reveal">
+          <LogoRail
+            logos={advertiserLogos}
+            mode="static"
+            eyebrow="Trusted by 30K+ brands and 1M+ partners worldwide"
+          />
+        </div>
 
-        <section id="final-cta" className="py-20 sm:py-24">
+        <section id="final-cta" className="reveal py-20 sm:py-24">
           <div className="mx-auto w-full max-w-4xl px-4 sm:px-6">
-            <div className="final-cta reveal">
+            <div className="final-cta">
               <p className="final-cta-eyebrow">Early Access</p>
               <h2 className="final-cta-title">Get early access</h2>
               <p className="final-cta-body">We are onboarding a limited number of brands.</p>
@@ -157,7 +159,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="border-t border-line bg-white/70">
+      <footer className="reveal border-t border-line bg-white/70">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 py-8 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <p className="font-display text-2xl font-extrabold tracking-tight">Emna.ai</p>
           <p className="text-sm text-muted">&copy; {new Date().getFullYear()} Emna.ai</p>
