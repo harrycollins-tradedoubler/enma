@@ -10,7 +10,7 @@ export default function LogoRail({
 
   const renderLogoItem = (logo, index, keyPrefix = 'logo') => {
     const height = staticMode ? 34 : 32;
-    const width = staticMode ? 168 : 172;
+    const scale = logo.visualWeight ?? 1;
 
     return (
       <li key={`${keyPrefix}-${logo.alt || logo.name || 'logo'}-${index}`} className="logo-rail-item">
@@ -20,7 +20,7 @@ export default function LogoRail({
             alt={logo.alt || logo.name || 'Partner logo'}
             loading="lazy"
             className="logo-rail-image"
-            style={{ height: `${height}px`, width: `${width}px` }}
+            style={{ height: `${height}px`, width: 'auto', transform: `scale(${scale})` }}
           />
         ) : (
           <span className="logo-rail-fallback">{logo.name || 'Logo'}</span>

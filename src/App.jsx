@@ -9,13 +9,13 @@ const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, ''
 
 const advertiserLogos = [
   { src: withBase('logos/publishers/publisher-8.png'), alt: 'Reach', width: 135, height: 37, visualWeight: 1.04 },
-  { src: withBase('logos/publishers/publisher-9.png'), alt: 'Daily Express', width: 135, height: 56, visualWeight: 0.97 },
-  { src: withBase('logos/publishers/publisher-10.png'), alt: 'The Times', width: 234, height: 131, visualWeight: 0.92 },
-  { src: withBase('logos/publishers/publisher-11.png'), alt: 'The Guardian', width: 233, height: 132, visualWeight: 0.93 },
-  { src: withBase('logos/publishers/publisher-12.png'), alt: 'talkSPORT', width: 238, height: 68, visualWeight: 0.8 },
-  { src: withBase('logos/publishers/publisher-2.png'), alt: 'Grazia', width: 144, height: 45, visualWeight: 1.01 },
-  { src: withBase('logos/publishers/publisher-4.png'), alt: 'Closer', width: 114, height: 33, visualWeight: 1.04 },
-  { src: withBase('logos/publishers/publisher-3.png'), alt: 'Future', width: 659, height: 314, visualWeight: 0.88 }
+  { src: withBase('logos/publishers/publisher-9.png'), alt: 'Daily Express', width: 135, height: 56, visualWeight: 1.02 },
+  { src: withBase('logos/publishers/publisher-10.png'), alt: 'The Times', width: 234, height: 131, visualWeight: 1.18 },
+  { src: withBase('logos/publishers/publisher-11.png'), alt: 'The Guardian', width: 233, height: 132, visualWeight: 1.18 },
+  { src: withBase('logos/publishers/publisher-12.png'), alt: 'talkSPORT', width: 238, height: 68, visualWeight: 0.92 },
+  { src: withBase('logos/publishers/publisher-2.png'), alt: 'Grazia', width: 144, height: 45, visualWeight: 1.06 },
+  { src: withBase('logos/publishers/publisher-4.png'), alt: 'Closer', width: 114, height: 33, visualWeight: 1.08 },
+  { src: withBase('logos/publishers/publisher-3.png'), alt: 'Future', width: 659, height: 314, visualWeight: 1.3 }
 ];
 
 const llmLogos = [
